@@ -1,71 +1,71 @@
-import Const from '../Constants';
+import * as types from './actionTypes';
 
 // Action Creators
 const ReceiveSubgroups = subgroups => {
-  return { type: Const.RECEIVE_SUBGROUPS, subgroups };
+  return { type: types.RECEIVE_SUBGROUPS, subgroups };
 };
 const DeleteSubgroup = subgroup => {
-  return { type: Const.DELETE_SUBGROUP, subgroup };
+  return { type: types.DELETE_SUBGROUP, subgroup };
 };
 const LoadingUsers = () => {
-  return { type: Const.LOADING_USERS };
+  return { type: types.LOADING_USERS };
 };
 const LoadingSubgroups = () => {
-  return { type: Const.LOADING_SUBGROUPS };
+  return { type: types.LOADING_SUBGROUPS };
 };
 const ReceiveUsers = users => {
-  return { type: Const.RECEIVE_USERS, users };
+  return { type: types.RECEIVE_USERS, users };
 };
 export const ClearUsers = () => {
-  return { type: Const.CLEAR_USERS, users: [] };
+  return { type: types.CLEAR_USERS, users: [] };
 };
 const UpdateUsers = user => {
-  return { type: Const.UPDATE_USERS, user };
+  return { type: types.UPDATE_USERS, user };
 };
 const RemoveUser = user => {
-  return { type: Const.REMOVE_USER, user };
+  return { type: types.REMOVE_USER, user };
 };
 const Authenticated = (authenticated, iaaAuth, iaacheck) => {
-  return { type: Const.USER_AUTHENTICATION, authenticated, iaaAuth, iaacheck };
+  return { type: types.USER_AUTHENTICATION, authenticated, iaaAuth, iaacheck };
 };
 const AddDummyUser = displayId => {
-  return { type: Const.ADD_DUMMY_USER, displayId };
+  return { type: types.ADD_DUMMY_USER, displayId };
 };
 const MarkUserForDeletion = identifier => {
-  return { type: Const.MARK_USER_FOR_DELETION, identifier };
+  return { type: types.MARK_USER_FOR_DELETION, identifier };
 };
 const DummyUserFail = displayId => {
-  return { type: Const.FAILED_DUMMY_USER, displayId };
+  return { type: types.FAILED_DUMMY_USER, displayId };
 };
 export const ResetState = () => {
-  return { type: Const.RESET_STATE };
+  return { type: types.RESET_STATE };
 };
 const AddNotification = (messageId, title, message) => {
-  return { type: Const.ADD_NOTIFICATION, notification: { messageId, title, message } };
+  return { type: types.ADD_NOTIFICATION, notification: { messageId, title, message } };
 };
 const RemoveNotification = messageId => {
-  return { type: Const.REMOVE_NOTIFICATION, messageId };
+  return { type: types.REMOVE_NOTIFICATION, messageId };
 };
 const PrivateGroup = confidential => {
-  return { type: Const.PRIVATE_GROUP, confidential };
+  return { type: types.PRIVATE_GROUP, confidential };
 };
 const StoreRegistrationToken = token => {
-  return { type: Const.STORE_REGISTRATION_TOKEN, token };
+  return { type: types.STORE_REGISTRATION_TOKEN, token };
 };
 export const UpdateGroupName = groupName => {
-  return { type: Const.RECEIVE_GROUP_NAME, groupName };
+  return { type: types.RECEIVE_GROUP_NAME, groupName };
 };
 export const UpdatePrivateGroupVis = enabled => {
-  return { type: Const.STORE_PRIVATE_GROUP_VISIBILITY, enabled };
+  return { type: types.STORE_PRIVATE_GROUP_VISIBILITY, enabled };
 };
 export const UpdatePrivateGroupVisTimeout = timeout => {
-  return { type: Const.STORE_PRIVATE_GROUP_VISIBILITY_TIMEOUT, timeout };
+  return { type: types.STORE_PRIVATE_GROUP_VISIBILITY_TIMEOUT, timeout };
 };
 export const UpdateNetidAllowed = netidAllowed => {
-  return { type: Const.STORE_NETID_ALLOWED, netidAllowed };
+  return { type: types.STORE_NETID_ALLOWED, netidAllowed };
 };
 export const UpdateTokenTTL = tokenTTL => {
-  return { type: Const.STORE_TOKEN_TTL, tokenTTL };
+  return { type: types.STORE_TOKEN_TTL, tokenTTL };
 };
 
 // -----------------------
