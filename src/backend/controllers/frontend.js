@@ -2,7 +2,7 @@ import { Router } from 'express';
 import path from 'path';
 import passport from 'passport';
 import { ensureAuth, backToUrl, uwerSetCookieDefaults } from '../utils/helpers';
-import { Routes } from 'Routes';
+import { routes } from 'routes';
 import Groups from 'models/groupModel';
 
 let app = Router();
@@ -42,17 +42,17 @@ if (NODE_ENV === 'development') {
 
 // Shibboleth Routes
 app.get(
-  Routes.Login,
+  routes.Login,
   function(req, res, next) {
     res.cookie('authRedirectUrl', req.query.returnUrl, { ...uwerSetCookieDefaults, signed: false, maxAge: 5 * 60 * 1000 });
     next();
   },
-  passport.authenticate('saml', { failureRedirect: Routes.Welcome, failureFlash: true })
+  passport.authenticate('saml', { failureRedirect: routes.Welcome, failureFlash: true })
 );
 
 app.post(
   '/login/callback',
-  passport.authenticate('saml', { failureRedirect: Routes.Welcome, failureFlash: true }),
+  passport.authenticate('saml', { failureRedirect: routes.Welcome, failureFlash: true }),
   async (req, res, next) => {
     // admins are the effective members of the base group
     let admins = await Groups.GetEffectiveMembers(BASE_GROUP.slice(0, -1));
@@ -62,7 +62,7 @@ app.post(
     } else {
       console.log(`User ${req.user.UWNetID} is not in the ${BASE_GROUP.slice(0, -1)} group, admins: ${JSON.stringify(admins)}`);
       req.logout();
-      res.redirect(Routes.NotAuthorized);
+      res.redirect(routes.NotAuthorized);
     }
   },
   backToUrl()
@@ -70,7 +70,7 @@ app.post(
 
 // This route must be the very last one or things get wonky in production
 if (process.env.NODE_ENV === 'production') {
-  app.get(Object.values(Routes), (req, res) => {
+  app.get(Object.values(routes), (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', '..', 'index.html'));
   });
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ConfirmModal from 'Components/ConfirmModal';
+import ConfirmModal from 'components/ConfirmModal';
 import Tooltip from '@material-ui/core/Tooltip';
 import FA from 'react-fontawesome';
 import Button from '@material-ui/core/Button';
-import ContentModal from 'Components/ContentModal';
+import ContentModal from 'components/ContentModal';
 
 export default class Configure extends Component {
   constructor(props) {

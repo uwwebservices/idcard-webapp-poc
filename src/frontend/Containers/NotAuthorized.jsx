@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import RegistrationModal from 'Components/RegistrationModal';
+import RegistrationModal from 'components/RegistrationModal';
 import FA from 'react-fontawesome';
 import Button from '@material-ui/core/Button';
-import { StopRegistrationSession } from '../Actions';
+import { StopRegistrationSession } from '../actions';
 
 class NotAuthorized extends Component {
   endRegistration = () => {

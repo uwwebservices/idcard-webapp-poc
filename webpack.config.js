@@ -104,12 +104,12 @@ module.exports = {
     resolve: {
       modules: ['node_modules'],
       alias: {
-        Components: path.resolve('./src/frontend/Components'),
-        Containers: path.resolve('./src/frontend/Containers'),
+        components: path.resolve('./src/frontend/components'),
+        containers: path.resolve('./src/frontend/containers'),
         css: path.resolve('./src/frontend/css'),
-        Images: path.resolve('./src/frontend/images'),
-        Assets: path.resolve('./src/backend/assets'),
-        Routes: path.resolve('./src/backend/routes')
+        images: path.resolve('./src/frontend/images'),
+        assets: path.resolve('./src/backend/assets'),
+        routes: path.resolve('./src/backend/routes')
       },
       extensions: ['.js', '.jsx', '.json', '.css', '.scss'],
       fallback: {

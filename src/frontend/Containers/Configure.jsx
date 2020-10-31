@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import FA from 'react-fontawesome';
-import Subgroup from 'Components/Subgroup';
+import Subgroup from 'components/Subgroup';
 import { connect } from 'react-redux';
-import RegistrationModal from 'Components/RegistrationModal';
-import ConfigOptions from 'Components/ConfigOptions';
-import ContentModal from 'Components/ContentModal';
+import RegistrationModal from 'components/RegistrationModal';
+import ConfigOptions from 'components/ConfigOptions';
+import ContentModal from 'components/ContentModal';
 import {
   UpdateGroupName,
   LoadSubgroups,
@@ -17,7 +17,7 @@ import {
   UpdateTokenTTL,
   UpdatePrivateGroupVis,
   UpdatePrivateGroupVisTimeout
-} from '../Actions';
+} from '../actions';
 
 class Configure extends Component {
   constructor(props) {

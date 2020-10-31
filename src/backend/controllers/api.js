@@ -2,7 +2,7 @@ import { Router } from 'express';
 import Groups from 'models/groupModel';
 import IDCard from 'models/idcardModel';
 import PWS from 'models/pwsModel';
-import { API } from 'Routes';
+import { API } from 'routes';
 import { Certificate } from 'ews-api-lib';
 import { authMiddleware, authOrTokenMiddleware, tokenMiddleware, baseMiddleware, getFullGroupName, idaaRedirectUrl, setDevModeCookie, uwerSetCookieDefaults } from '../utils/helpers';
 import csv from 'csv-express'; // required for csv route even though shown as unused

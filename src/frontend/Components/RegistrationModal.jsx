@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentModal from 'Components/ContentModal';
+import ContentModal from 'components/ContentModal';
 
 class RegistrationModal extends React.Component {
   constructor(props) {

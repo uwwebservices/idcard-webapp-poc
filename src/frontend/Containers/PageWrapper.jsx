@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { CheckAuthentication, CheckToken, ResetState, StopRegistrationSession } from '../Actions';
-import Header from 'Components/Header';
-import Footer from 'Components/Footer';
-import Authorization from 'Components/Authorization';
+import { CheckAuthentication, CheckToken, ResetState, StopRegistrationSession } from '../actions';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Authorization from 'components/Authorization';
 import NotificationSystem from 'react-notification-system';
 
 class PageWrapper extends Component {

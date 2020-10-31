@@ -1,5 +1,5 @@
 import * as types from '../actions/actionTypes';
-import defaultUser from 'Assets/defaultUser';
+import defaultUser from 'assets/defaultUser';
 
 export const initialState = {
   authenticated: null,

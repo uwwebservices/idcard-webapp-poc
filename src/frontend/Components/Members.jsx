@@ -2,10 +2,10 @@ import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ConfirmModal from 'Components/ConfirmModal';
+import ConfirmModal from 'components/ConfirmModal';
 import Chip from '@material-ui/core/Chip';
 import FA from 'react-fontawesome';
-import DefaultUser from 'Assets/defaultUser';
+import DefaultUser from 'assets/defaultUser';
 
 export default class Test extends React.Component {
   keepUser = () => {

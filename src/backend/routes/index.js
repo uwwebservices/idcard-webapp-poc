@@ -15,7 +15,7 @@ export const API = {
 };
 
 // Page Routes
-export const Routes = {
+export const routes = {
   Welcome: '/',
   Config: '/config',
   Register: '/register',

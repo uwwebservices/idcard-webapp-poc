@@ -6,8 +6,8 @@
                 "models": "./src/backend/models",
                 "controllers": "./src/backend/controllers",
                 "config": "./config",
-                "Assets": "./src/backend/assets",
-                "Routes": "./src/backend/routes"
+                "assets": "./src/backend/assets",
+                "routes": "./src/backend/routes"
             }
         }],
         ["@babel/plugin-proposal-class-properties"],

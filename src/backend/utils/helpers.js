@@ -1,4 +1,4 @@
-import { Routes } from 'Routes';
+import { routes } from 'routes';
 
 const NODE_ENV = process.env.NODE_ENV;
 const BASE_GROUP = process.env.BASE_GROUP;
@@ -12,7 +12,7 @@ export const ensureAuth = (returnUrl = '/') => {
     if (req.isAuthenticated() || devModeAuthenticated(req)) {
       return next();
     } else {
-      res.redirect(`${Routes.Login}?returnUrl=${returnUrl}`);
+      res.redirect(`${routes.Login}?returnUrl=${returnUrl}`);
     }
   };
 };
@@ -37,9 +37,9 @@ const devModeAuthenticated = req => {
   return req.signedCookies.devMode && (req.signedCookies.devMode == 'Authenticated' || req.signedCookies.devMode == 'Token');
 };
 
-export const backToUrl = (url = Routes.Register) => {
+export const backToUrl = (url = routes.Register) => {
   return function(req, res) {
-    res.redirect(req.cookies.authRedirectUrl || Routes.Register);
+    res.redirect(req.cookies.authRedirectUrl || routes.Register);
   };
 };
 

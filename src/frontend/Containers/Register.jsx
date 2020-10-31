@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import AddMemberForm from 'Components/AddMemberForm';
-import Members from 'Components/Members';
+import AddMemberForm from 'components/AddMemberForm';
+import Members from 'components/Members';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import RegistrationModal from 'Components/RegistrationModal';
+import RegistrationModal from 'components/RegistrationModal';
 import { connect } from 'react-redux';
-import { LoadUsers, AddUser, DeleteUser, StartRegistrationSession, StopRegistrationSession } from '../Actions';
+import { LoadUsers, AddUser, DeleteUser, StartRegistrationSession, StopRegistrationSession } from '../actions';
 import FA from 'react-fontawesome';
 import { Link } from 'react-router-dom';
-import LoadingUsers from 'Components/LoadingUsers';
+import LoadingUsers from 'components/LoadingUsers';
 
 class Register extends Component {
   constructor(props) {
