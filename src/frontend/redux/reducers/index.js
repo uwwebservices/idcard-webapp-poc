@@ -2,7 +2,7 @@ import * as types from '../actions/actionTypes';
 import defaultUser from 'assets/defaultUser';
 import initialState from './initialState';
 
-export const RootReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.RECEIVE_GROUP_NAME:
       return { ...state, groupName: action.groupName };
