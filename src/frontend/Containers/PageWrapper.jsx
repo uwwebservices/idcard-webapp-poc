@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { CheckAuthentication, CheckToken, ResetState, StopRegistrationSession } from '../actions';
+import { CheckAuthentication, CheckToken, ResetState, StopRegistrationSession } from '../redux/actions';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Authorization from 'components/Authorization';

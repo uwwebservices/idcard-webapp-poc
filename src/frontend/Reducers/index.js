@@ -1,4 +1,4 @@
-import * as types from '../actions/actionTypes';
+import * as types from '../redux/actions/actionTypes';
 import defaultUser from 'assets/defaultUser';
 
 export const initialState = {
