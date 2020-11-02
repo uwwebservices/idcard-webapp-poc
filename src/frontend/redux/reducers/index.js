@@ -1,22 +1,6 @@
 import * as types from '../actions/actionTypes';
 import defaultUser from 'assets/defaultUser';
-
-export const initialState = {
-  authenticated: null,
-  iaaAuth: null,
-  iaacheck: '',
-  groupName: '',
-  subgroups: [],
-  users: [],
-  loading: { users: false, subgroups: false },
-  registrationToken: false,
-  privGrpVis: true,
-  privGrpVisTimeout: 5,
-  netidAllowed: false,
-  tokenTTL: 180,
-  confidential: false,
-  notifications: []
-};
+import initialState from './initialState';
 
 export const RootReducer = (state = initialState, action) => {
   switch (action.type) {
