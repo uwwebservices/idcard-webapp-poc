@@ -10,7 +10,7 @@ import PageWrapper from 'containers/PageWrapper';
 import NotAuthorized from 'containers/NotAuthorized';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './Store.js';
+import store from './redux/store';
 
 // Passes all props down to children
 const PorousRoute = function({ children, ...props }) {

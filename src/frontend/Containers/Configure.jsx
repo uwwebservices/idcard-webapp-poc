@@ -17,7 +17,7 @@ import {
   UpdateTokenTTL,
   UpdatePrivateGroupVis,
   UpdatePrivateGroupVisTimeout
-} from '../actions';
+} from '../redux/actions';
 
 class Configure extends Component {
   constructor(props) {

@@ -1,4 +1,4 @@
-import * as types from '../redux/actions/actionTypes';
+import * as types from '../actions/actionTypes';
 import defaultUser from 'assets/defaultUser';
 
 export const initialState = {
@@ -73,8 +73,6 @@ export const RootReducer = (state = initialState, action) => {
       return { ...state, confidential: action.confidential };
     case types.RESET_STATE:
       return initialState;
-    case types.STORE_SETTINGS:
-      return { ...state, ...action.settings };
     default:
       return state;
   }
