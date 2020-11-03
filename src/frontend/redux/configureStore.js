@@ -1,5 +1,6 @@
-import { applyMiddleware, compose, createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 import loggerMiddleware from './middleware/logger';
 import { rootReducer } from './reducers';
@@ -8,17 +9,15 @@ import initialState from './reducers/initialState';
 
 export default function configureStore() {
   // Configure middleware
-  let middlewares;
+  const middlewares = [thunkMiddleware];
   if (process.env.NODE_ENV === 'development') {
-    middlewares = [loggerMiddleware, thunkMiddleware];
-  } else {
-    middlewares = [thunkMiddleware];
+    middlewares.push(loggerMiddleware)
   }
   const middlewareEnhancer = applyMiddleware(...middlewares);
 
   // Configure enhancers
   const enhancers = [middlewareEnhancer]
-  const composedEnhancers = compose(...enhancers)
+  const composedEnhancers = composeWithDevTools(...enhancers)
 
   // Setup persisted state
   if (!localStorage.getItem('reduxState')) {

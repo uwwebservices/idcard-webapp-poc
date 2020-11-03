@@ -80,6 +80,7 @@
     "nodemon": "2.0.6",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "puppeteer": "5.4.1",
+    "redux-devtools-extension": "^2.13.8",
     "sass-loader": "10.0.4",
     "style-loader": "2.0.0",
     "terser-webpack-plugin": "5.0.3",
