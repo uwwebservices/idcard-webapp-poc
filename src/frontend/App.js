@@ -9,7 +9,7 @@ import Welcome from 'containers/Welcome';
 import PageWrapper from 'containers/PageWrapper';
 import NotAuthorized from 'containers/NotAuthorized';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Provider as ReduxProvider } from 'react-redux';
 import configureStore from './redux/configureStore';
 
 const store = configureStore();
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Provider store={store}>
+        <ReduxProvider store={store}>
           <MuiThemeProvider theme={theme}>
             <Switch>
               <PorousRoute path="/config" loginRequired={true} iaaRequired={true} tokenRequired={false}>
@@ -44,7 +44,7 @@ class App extends React.Component {
               </PorousRoute>
             </Switch>
           </MuiThemeProvider>
-        </Provider>
+        </ReduxProvider>
       </Router>
     );
   }
